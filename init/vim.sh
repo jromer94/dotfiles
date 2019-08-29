@@ -26,12 +26,3 @@ make distclean > /dev/null
 
 echo "Cloning Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null
-
-echo "Installing Plugins"
-vim +PluginInstall +qall
-
-echo "Compiling command t"
-cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
-make clean > /dev/null
-ruby extconf.rb > /dev/null
-make > /dev/null
