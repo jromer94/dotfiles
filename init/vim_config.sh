@@ -11,4 +11,5 @@ echo "Setting up swp, session, and undo folder directories"
 mkdir -p ~/.vim/tmp/backup
 mkdir -p ~/.vim/tmp/undo
 mkdir -p ~/.vim/tmp/view
+mkdir -p ~/.vim/tmp/swap
 touch ~/.vim/tmp/viminfo
