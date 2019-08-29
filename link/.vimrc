@@ -21,6 +21,8 @@ Plugin 'wincent/command-t'
 Plugin 'w0rp/ale'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -38,7 +40,7 @@ inoremap jj <ESC>
 
 "Basic settings"
 set hidden
-set backspace=indent,eol,start "Makes backspace work"
+set backspace=indent,eol,start "makes backspace work"
 set history=500 "Sets undo history size"
 set number "Turns on line numbering"
 set tabstop=4 "Sets indent size of tabs"
