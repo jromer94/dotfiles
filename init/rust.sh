@@ -1,7 +1,7 @@
 #!/bin/bash
 if ! [ -x "$(command -v rustup)" ]; then
     echo "Installing rust"
-    curl https://sh.rustup.rs -sSf | sh > /dev/null
+    curl https://sh.rustup.rs -sSf | sh -y > /dev/null
 else
     echo "Rust installation found"
 fi
