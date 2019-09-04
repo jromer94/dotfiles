@@ -6,5 +6,6 @@ else
     echo "Rust installation found"
 fi
 
+source $HOME/.cargo/env
 echo "Updating rust"
 rustup update stable > /dev/null
