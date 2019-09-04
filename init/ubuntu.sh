@@ -9,3 +9,6 @@ sudo apt-get -y update > /dev/null
 
 echo "Installing basic dependencies i.e git, curl"
 sudo apt-get -y install git curl > /dev/null
+
+echo "setting gnome to use two finger right click"
+gsettings set org.gnome.desktop.peripherals.touchpad click-method fingers
