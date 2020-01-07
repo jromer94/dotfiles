@@ -12,3 +12,6 @@ sudo apt-get -y install git curl > /dev/null
 
 echo "setting gnome to use two finger right click"
 gsettings set org.gnome.desktop.peripherals.touchpad click-method fingers
+
+echo "setting gnome to map caps lock to escape"
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
