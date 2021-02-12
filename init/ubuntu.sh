@@ -14,4 +14,6 @@ echo "setting gnome to use two finger right click"
 gsettings set org.gnome.desktop.peripherals.touchpad click-method fingers
 
 echo "setting gnome to map caps lock to escape"
+# Seeing if having both prevents external keyboard not following gsettings
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+setxkbmap -option caps:ctrl_modifier

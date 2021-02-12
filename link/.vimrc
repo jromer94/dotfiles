@@ -1,36 +1,27 @@
 set nocompatible              " required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
+Plug 'wincent/command-t'
+Plug 'w0rp/ale'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Initialize plugin system
+call plug#end()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'morhetz/gruvbox'
-Plugin 'wincent/command-t'
-Plugin 'w0rp/ale'
-Plugin 'tpope/vim-vinegar'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'rust-lang/rust.vim'
-" ...
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 
@@ -53,7 +44,7 @@ set smartindent "Remembers previous indent when creating new lines"
 set wildignorecase "Ignore case while autocompletting search results"
 set clipboard=unnamedplus "enable clipboard"
 
-au BufNewFile,BufRead *.js,*.jsx*,*.rb,*.html,*.xml,*.wat :setlocal sw=2 ts=2 sts=2 " Two spaces for js/ruby/etc files "
+au BufNewFile,BufRead *.js,*.jsx*,*.rb,*.html,*.xml,*.wat,*.scss,*.css :setlocal sw=2 ts=2 sts=2 " Two spaces for js/ruby/etc files "
 
 let python_highlight_all=1
 syntax on

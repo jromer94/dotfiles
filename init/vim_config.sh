@@ -1,8 +1,8 @@
 echo "Installing Plugins"
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 
 echo "Compiling command t"
-cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
+cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t
 make clean > /dev/null
 ruby extconf.rb > /dev/null
 make > /dev/null

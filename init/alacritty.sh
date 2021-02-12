@@ -6,7 +6,11 @@ git clone https://github.com/jwilm/alacritty.git ~/alacritty > /dev/null
 cd ~/alacritty
 git pull > /dev/null
 
-echo "Building alacritty"
-cargo install cargo-deb --force
-echo "Installing alacritty deb file"
-cargo deb --install --manifest-path alacritty/Cargo.toml
+echo "Building alacritty and installing"
+cargo build --release
+
+echo "Copying binary to bin"
+sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install extra/linux/Alacritty.desktop
+sudo update-desktop-database
