@@ -22,5 +22,7 @@ sudo make install > /dev/null
 
 echo "Cloning tpm"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm > /dev/null
+cd ~/.tmux/plugins/tpm > /dev/null
+git pull > /dev/null
 echo "Installing tmux plugins"
 sh ~/.tmux/plugins/tpm/scripts/install_plugins.sh > /dev/null
